@@ -1,2 +1,2 @@
-# crispy-fiesta
+# feast-finder
 Algolia Interview Project
