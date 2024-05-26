@@ -16,6 +16,7 @@ let userLongitude;
 
 // Check if geolocation is supported by the browser
 if ("geolocation" in navigator) {
+  console.log("inside geolocation");
   navigator.geolocation.getCurrentPosition(
     (position) => {
       userLatitude = position.coords.latitude;
@@ -30,6 +31,8 @@ if ("geolocation" in navigator) {
   // Geolocation is not supported
   console.error("Geolocation is not supported by this browser.");
 }
+console.log(`inside geolocation ${userLatitude}, ${userLongitude}`);
+
 helper.setQueryParameter("aroundLatLng", `${userLatitude}, ${userLongitude}`);
 
 // helper.setQueryParameter("aroundLatLng", `37.773972, -122.431297`); //test with San Francisco, works
