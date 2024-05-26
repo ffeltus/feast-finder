@@ -1,0 +1,151 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+        background-image: url('background.png'); /* Specify the path to your image */
+        background-repeat: repeat; /* Repeat the image both horizontally and vertically */
+        background-size: auto; /* Maintain the original size of the image */
+    
+}
+
+/* Search box */
+.search-box {
+    background-color: #18A0FB;
+    padding: 20px;
+    height: 100px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: white; /* Set background color for the input */
+    font-size: 16px; /* Set font size */
+    color: #333; /* Set text color */
+}
+
+/* Optional: Style placeholder text */
+.search-input::placeholder {
+    color: #999; /* Set placeholder text color */
+}
+
+/* Optional: Style focus state */
+.search-input:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px #18A0FB; /* Add custom focus shadow */
+}
+
+/* Main container */
+.container {
+    display: flex; /* Ensures child elements are placed side-by-side */
+    flex: 1; /* Allow the container to expand to fill available space */
+}
+.page-container {
+    width: 90%; /* Set width to 90% of the viewport width */
+    margin: 20px auto; /* Center the container horizontally */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    border-radius: 8px; /* Add border radius */
+}
+
+
+/* Left side */
+.left-side {
+    width: 200px;
+    background-color: white;
+    border-right: 1px solid #ccc; /* Lighter gray border */
+    box-sizing: border-box;
+    padding: 20px;
+    overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+.left-side .facet-panel {
+    margin-bottom: 50px; /* Add margin between facet panels */
+}
+
+#facet-list input[type="checkbox"],
+#facet-list2 input[type="checkbox"],
+#facet-list3 input[type="checkbox"] {
+    display: none;
+}
+
+
+
+/* Highlight the label element within the facet panel when hovered over */
+.facet-panel label:hover {
+    background-color: #008bfd; /* Change to the desired highlight color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+
+  #reset-facet-button {
+    background-color: #007bff; /* Blue background color */
+    color: #ffffff; /* White font color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 5px; /* Apply slight border-radius for rounded edges */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Add transition effect */
+  }
+  
+  #reset-facet-button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+  }
+
+
+
+  
+
+
+/* Right side */
+.right-side {
+    flex: 1; /* Allows right side to fill remaining space */
+    background-color: white;
+    box-sizing: border-box;
+    padding: 20px;
+    overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+li, ul, ol {
+    list-style: none; /* Remove default bullet points */
+}
+
+/* Style for search result container */
+.result {
+    display: flex; /* Use flexbox for layout */
+    margin-bottom: 20px; /* Add margin between search results */
+}
+
+/* Style for image container */
+.result__image-container {
+    flex: 0 0 auto; /* Allow panel to shrink if needed */
+    margin-right: 20px; /* Add space between image panel and text panel */
+}
+
+/* Style for image */
+.result__image-container img {
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Style for text container */
+.result__text-container {
+    flex: 1; /* Expand to fill remaining space */
+}
+
+/* Style for result title */
+.result__title {
+    margin-top: 0; /* Remove default margin */
+}
+
+/* Style for result details */
+.result__details {
+    margin-top: 0; /* Remove default margin */
+}
+
