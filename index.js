@@ -8,34 +8,33 @@ var helper = algoliasearchHelper(client, indexName, {
   facets: ["food_type", "stars_count", "payment_options"],
 });
 
-// Found on Google Search: As of Chrome 50, the Geolocation API only works on secure contexts (HTTPS).
-// If your site is hosted on a non-secure origin (such as HTTP ), any requests for the user's location no longer function.
-
 let userLatitude;
 let userLongitude;
 
-// Check if geolocation is supported by the browser
-if ("geolocation" in navigator) {
-  console.log("inside geolocation");
-  navigator.geolocation.getCurrentPosition(
-    (position) => {
-      userLatitude = position.coords.latitude;
-      userLongitude = position.coords.longitude;
-    },
-    (error) => {
-      // Handle errors
-      console.error("Error getting geolocation:", error);
-    }
-  );
-} else {
-  // Geolocation is not supported
-  console.error("Geolocation is not supported by this browser.");
+const options = {
+  enableHighAccuracy: false,
+  timeout: 5000,
+  maximumAge: 0,
+};
+
+function success(pos) {
+  const crd = pos.coords;
+
+  console.log("Your current position is:");
+  console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`);
+  console.log(`More or less ${crd.accuracy} meters.`);
+  userLatitude = crd.latitude;
+  userLongitude = crd.longitude;
+  helper.setQueryParameter("aroundLatLng", `${userLatitude}, ${userLongitude}`);
+  helper.search();
 }
-console.log(`inside geolocation ${userLatitude}, ${userLongitude}`);
 
-helper.setQueryParameter("aroundLatLng", `${userLatitude}, ${userLongitude}`);
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
 
-// helper.setQueryParameter("aroundLatLng", `37.773972, -122.431297`); //test with San Francisco, works
+navigator.geolocation.getCurrentPosition(success, error, options);
 
 helper.on("error", function (error) {
   console.error("Algolia Error:", error);
