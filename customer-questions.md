@@ -81,7 +81,7 @@ Hello Leo,
 Integrating Algolia into your website will be a very manageable task as we provide a host of onboarding, getting started tutorials and check-lists for development. We are renowned for our ease of use and seamless integration, as is evidenced by our inclusion as a leader in the new 2024 Gartner Magic Quadrant for Search and Product Discovery. See more information about the reasons for our leadership here: https://www.algolia.com/about/news/algolia-named-a-leader-in-2024-gartner-magic-quadranttm-for-search-and-product-discovery/
 
 To get a quick start with your integration project: https://www.algolia.com/doc/guides/getting-started/quick-start/
-This will show you how to how to set up an account, and get you going with a tutorial, understanding the basics very quickly.
+This will show you how to set up an account, and get you going with a tutorial, understanding the basics very quickly.
 
 For simplified development, we have a vanilla JavaScript library that lets you create an instant search results experience using Algolia’s search API.
 https://www.algolia.com/doc/guides/building-search-ui/getting-started/js/#welcome-to-instantsearchjs
