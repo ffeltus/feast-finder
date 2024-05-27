@@ -5,7 +5,7 @@ Link to my website:
 
 https://ffeltus.github.io/feast-finder/
 
-The Jupiter Notebook with the data manipulation and loading (using the Algolia Search Client) is here:
+The Jupyter Notebook with the data manipulation and loading (using the Algolia Search Client and Pandas) is here:
 
 dataset/merge_restaurant_data.ipynb
 
