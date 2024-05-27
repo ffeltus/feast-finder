@@ -1,5 +1,5 @@
+const apiKey = window.config.apiKey;
 const applicationID = "GK7Q3EEC39";
-const apiKey = "1999eb90790ce9e325af34f1a65fec25";
 const indexName = "FeastFinder";
 
 var client = algoliasearch(applicationID, apiKey);
