@@ -9,3 +9,7 @@ The Jupyter Notebook with the data manipulation and loading (using the Algolia S
 
 dataset/merge_restaurant_data.ipynb
 
+The customer questions are answered here:
+
+customer-questions.md
+
