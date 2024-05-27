@@ -1,4 +1,4 @@
-const apiKey = window.config.apiKey;
+const apiKey = "1999eb90790ce9e325af34f1a65fec25";
 const applicationID = "GK7Q3EEC39";
 const indexName = "FeastFinder";
 
