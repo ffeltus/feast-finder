@@ -45,7 +45,7 @@ helper.on("result", function (event) {
 });
 
 function getStarsHTML(starsCount) {
-  var rating = Math.round(starsCount);
+  var rating = Math.floor(starsCount);
   var maxStars = 5;
   var goldStars = "";
   for (var i = 0; i < rating; i++) {
